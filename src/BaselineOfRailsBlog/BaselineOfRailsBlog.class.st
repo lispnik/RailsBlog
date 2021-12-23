@@ -10,6 +10,9 @@ BaselineOfRailsBlog >> baseline: spec [
 	spec 
 		for: #common
 		do: [ 
+			"dependencies"
+			spec baseline: 'Seaside3'
+			with: [ spec repository: 'github://SeasideSt/Seaside:master/repository' ].
 			"packages"
 			spec 
 				package: 'RailsBlog';
