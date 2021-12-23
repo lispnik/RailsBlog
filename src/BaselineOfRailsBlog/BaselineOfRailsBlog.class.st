@@ -7,6 +7,13 @@ Class {
 { #category : #baselines }
 BaselineOfRailsBlog >> baseline: spec [
 	<baseline>
-	spec baseline: 'Seaside3' 
-	with: [ spec repository: 'github://SeasideSt/Seaside:master/repository' ] 
+	spec 
+		for: #common
+		do: [ 
+			"packages"
+			spec 
+				package: 'RailsBlog';
+				package: 'RailsBlog-Model';
+				package: 'RailsBlog-Web' ].
+	
 ]
